@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Taradod Nexus — کاتالوگ محصول | کنترل تردد · بیومتریک · راهکاران</title>
+  <meta name="description" content="کاتالوگ عمومی سامانه کنترل تردد Taradod Nexus — داشبورد عملیاتی، تردد زنده، پرسنل، دستگاه‌های بیومتریک و یکپارچه‌سازی راهکاران ERP." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0a0f0d;
+      --bg2: #101816;
+      --card: #15201c;
+      --line: #24332c;
+      --text: #e8f5ef;
+      --muted: #8fa89a;
+      --accent: #34d399;
+      --accent2: #6ee7b7;
+      --warn: #fbbf24;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Vazirmatn, Tahoma, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      font-size: 15px;
+      line-height: 1.8;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    img { max-width: 100%; display: block; }
+    .wrap { width: min(1120px, calc(100% - 40px)); margin-inline: auto; }
+    header.hero {
+      padding: 88px 0 56px;
+      border-bottom: 1px solid var(--line);
+      background:
+        radial-gradient(900px 420px at 20% -10%, rgba(52, 211, 153, 0.10), transparent 60%),
+        var(--bg2);
+    }
+    .kicker {
+      color: var(--accent);
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      font-weight: 600;
+      margin: 0 0 14px;
+    }
+    h1 {
+      font-size: clamp(28px, 3.6vw, 42px);
+      line-height: 1.35;
+      margin: 0 0 18px;
+      font-weight: 700;
+    }
+    .lede {
+      color: var(--muted);
+      font-size: 16.5px;
+      line-height: 1.9;
+      max-width: 680px;
+      margin: 0 0 36px;
+    }
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+    .stat {
+      background: var(--card);
+      border: 1px solid var(--line);
+      padding: 18px 16px 16px;
+      border-radius: 12px;
+    }
+    .stat b { display: block; font-size: 20px; font-weight: 700; color: var(--accent2); }
+    .stat span { color: var(--muted); font-size: 12px; }
+    nav.toc {
+      position: sticky; top: 0; z-index: 20;
+      background: rgba(10, 15, 13, 0.92);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(12px);
+    }
+    nav.toc .wrap { display: flex; gap: 6px; flex-wrap: wrap; padding: 12px 0; }
+    .chip {
+      border: 1px solid var(--line);
+      background: transparent;
+      color: var(--text);
+      padding: 5px 12px;
+      font: inherit;
+      font-size: 12.5px;
+      cursor: pointer;
+      border-radius: 999px;
+    }
+    .chip:hover { border-color: var(--accent); color: var(--accent); }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      padding: 40px 0 8px;
+    }
+    .tile {
+      background: var(--card);
+      border: 1px solid var(--line);
+      overflow: hidden;
+      border-radius: 14px;
+      cursor: zoom-in;
+      transition: border-color .2s, transform .2s;
+    }
+    .tile:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .tile img { height: 168px; width: 100%; object-fit: cover; object-position: top; }
+    .tile .meta { padding: 14px 16px 16px; }
+    .tile .tag { color: var(--accent); font-size: 10px; font-weight: 600; letter-spacing: 0.12em; }
+    .tile h3 { margin: 6px 0 4px; font-size: 15.5px; font-weight: 600; }
+    .tile p { margin: 0; color: var(--muted); font-size: 12.5px; line-height: 1.65; }
+    section.mod { padding: 64px 0; border-top: 1px solid var(--line); }
+    .mod h2 { font-size: 24px; margin: 0 0 10px; font-weight: 700; }
+    .mod .why { color: var(--muted); margin: 0 0 24px; max-width: 720px; }
+    .shot {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      overflow: hidden;
+      background: #000;
+      cursor: zoom-in;
+    }
+    .shot img { width: 100%; object-fit: contain; }
+    .note {
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 13px;
+      border-right: 3px solid var(--accent);
+      padding-right: 12px;
+    }
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 36px 0 56px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    #lightbox {
+      display: none; position: fixed; inset: 0; z-index: 100;
+      background: rgba(0,0,0,.92); align-items: center; justify-content: center;
+      padding: 24px; cursor: zoom-out;
+    }
+    #lightbox.open { display: flex; }
+    #lightbox img { max-width: min(96vw, 1400px); max-height: 92vh; border-radius: 8px; }
+    @media (max-width: 900px) {
+      .stats, .gallery { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 560px) {
+      .stats, .gallery { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <p class="kicker">TARADOD NEXUS · PRODUCT CATALOG</p>
+      <h1>سامانهٔ سازمانی کنترل تردد — از دستگاه بیومتریک تا راهکاران ERP</h1>
+      <div class="privacy" style="margin:16px 0 0;padding:12px 14px;border:1px solid #2a4a3a;border-radius:10px;background:#122018;color:#9fbfb0;font-size:13px;line-height:1.7">
+اسکرین‌ها برای انتشار عمومی <b>ناشناس‌سازی</b> شده‌اند: نام افراد، شرکت، سایت، شناسه پرسنلی و آدرس IP دستگاه‌ها پوشانده یا با دادهٔ دمو جایگزین شده‌اند.
+کد و جزئیات پیاده‌سازی در این ریپو نیست.
+</div>
+      <p class="lede">
+        Taradod Nexus پنجرهٔ عملیاتی برای سازمان‌هایی است که تردد پرسنل را با دستگاه‌های چهره/اثرانگشت
+        ثبت می‌کنند و باید همان داده را تمیز، زنده و قابل اتکا به ERP راهکاران برسانند.
+        این کاتالوگ فقط سطوح رابط را نشان می‌دهد؛ کد و منطق پیاده‌سازی خصوصی می‌ماند.
+      </p>
+      <div class="stats">
+        <div class="stat"><b>Live TCP</b><span>تردد زنده از دستگاه</span></div>
+        <div class="stat"><b>Biometric</b><span>چهره · اثرانگشت · کارت</span></div>
+        <div class="stat"><b>Rahkaran</b><span>همگام‌سازی ERP</span></div>
+        <div class="stat"><b>On-prem</b><span>استقرار داخل سازمان</span></div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="toc">
+    <div class="wrap">
+      <button class="chip" data-go="gallery">گالری</button>
+      <button class="chip" data-go="ops">عملیات</button>
+      <button class="chip" data-go="people">پرسنل</button>
+      <button class="chip" data-go="devices">دستگاه</button>
+      <button class="chip" data-go="erp">ERP</button>
+      <button class="chip" data-go="intel">تحلیل</button>
+    </div>
+  </nav>
+
+  <div class="wrap" id="gallery">
+    <div class="gallery" id="grid"></div>
+  </div>
+
+  <section class="mod" id="ops">
+    <div class="wrap">
+      <h2>داشبورد عملیاتی و تردد زنده</h2>
+      <p class="why">وضعیت دستگاه‌ها، هشدارهای نیازمند اقدام، و جریان لحظه‌ای ورود/خروج — برای اتاق کنترل، نه اسلاید فروش.</p>
+      <div class="shot" data-full="shots/01_dashboard.png"><img src="shots/01_dashboard.png" alt="داشبورد عملیاتی" loading="lazy" /></div>
+      <p class="note">کارت‌های سلامت سیستم، آمار امروز، و صف اقدامات روی یک صفحه.</p>
+      <div class="shot" style="margin-top:18px" data-full="shots/02_live.png"><img src="shots/02_live.png" alt="تردد زنده" loading="lazy" /></div>
+      <p class="note">خواندن TCP از uFace/ZK، بافر قبل از ثبت نهایی، و همگام‌سازی ساعت RTC دستگاه.</p>
+      <div class="shot" style="margin-top:18px" data-full="shots/03_logs.png"><img src="shots/03_logs.png" alt="لاگ تردد" loading="lazy" /></div>
+    </div>
+  </section>
+
+  <section class="mod" id="people">
+    <div class="wrap">
+      <h2>پرسنل، کشف هویت و ورود داده</h2>
+      <p class="why">تطبیق افراد بین دستگاه، بانک محلی و ERP — بدون اکسل دستی در مقیاس سازمانی.</p>
+      <div class="shot" data-full="shots/04_personnel.png"><img src="shots/04_personnel.png" alt="پرسنل" loading="lazy" /></div>
+      <div class="shot" style="margin-top:18px" data-full="shots/12_ss_import.png"><img src="shots/12_ss_import.png" alt="ورود از SQL Server" loading="lazy" /></div>
+      <div class="shot" style="margin-top:18px" data-full="shots/11_attendance_flow.png"><img src="shots/11_attendance_flow.png" alt="جریان ثبت تردد" loading="lazy" /></div>
+    </div>
+  </section>
+
+  <section class="mod" id="devices">
+    <div class="wrap">
+      <h2>ایستگاه‌ها و بیومتریک</h2>
+      <p class="why">مدیریت چندسایت دستگاه، وضعیت آنلاین/آفلاین، و همگام‌سازی قالب‌های بیومتریک.</p>
+      <div class="shot" data-full="shots/08_stations.png"><img src="shots/08_stations.png" alt="ایستگاه‌ها" loading="lazy" /></div>
+      <div class="shot" style="margin-top:18px" data-full="shots/07_biometrics.png"><img src="shots/07_biometrics.png" alt="بیومتریک" loading="lazy" /></div>
+    </div>
+  </section>
+
+  <section class="mod" id="erp">
+    <div class="wrap">
+      <h2>راهکاران و معماری جریان</h2>
+      <p class="why">لایه SQL برای پرسنل/ERP و لایه TCP برای شناسایی زنده — مسیر داده شفاف برای ممیزی.</p>
+      <div class="shot" data-full="shots/06_rahkaran.png"><img src="shots/06_rahkaran.png" alt="راهکاران" loading="lazy" /></div>
+      <div class="shot" style="margin-top:18px" data-full="shots/05_flow.png"><img src="shots/05_flow.png" alt="درخت جریان" loading="lazy" /></div>
+      <div class="shot" style="margin-top:18px" data-full="shots/10_erp.png"><img src="shots/10_erp.png" alt="هاب ERP" loading="lazy" /></div>
+    </div>
+  </section>
+
+  <section class="mod" id="intel">
+    <div class="wrap">
+      <h2>تحلیل کیفیت و تنظیمات</h2>
+      <p class="why">گزارش عملکرد، شکاف‌های داده، و کنترل دسترسی ادمین.</p>
+      <div class="shot" data-full="shots/09_analytics.png"><img src="shots/09_analytics.png" alt="تحلیل" loading="lazy" /></div>
+      <div class="shot" style="margin-top:18px" data-full="shots/14_settings.png"><img src="shots/14_settings.png" alt="تنظیمات" loading="lazy" /></div>
+      <div class="shot" style="margin-top:18px" data-full="shots/13_login.png"><img src="shots/13_login.png" alt="ورود" loading="lazy" /></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <p>اسکرین‌ها از استقرار داخلی Taradod Nexus (سپتامبر ۲۰۲۶). جزئیات پیاده‌سازی و سورس خصوصی است.</p>
+      <p>© ramioo · Ramin Zalizadeh · <a href="https://ramioo.com" target="_blank" rel="noopener">ramioo.com</a>
+        · <a href="https://github.com/ramincsy" target="_blank" rel="noopener">GitHub</a></p>
+      <p style="margin-top:8px">اگر برای هلدینگ یا کارخانه ارزیابی کنترل تردد + ERP می‌کنید، دموی محدود تحت NDA ممکن است.</p>
+    </div>
+  </footer>
+
+  <div id="lightbox" role="dialog" aria-modal="true"><img alt="" /></div>
+
+  <script>
+    const shots = [
+      { src: "shots/01_dashboard.png", tag: "OPS", title: "داشبورد عملیاتی", desc: "سلامت سیستم، آمار امروز، اقدامات" },
+      { src: "shots/02_live.png", tag: "LIVE", title: "تردد زنده دستگاه", desc: "TCP / SDK · بافر و RTC" },
+      { src: "shots/03_logs.png", tag: "LOGS", title: "لاگ تردد", desc: "ورود و خروج ثبت‌شده" },
+      { src: "shots/04_personnel.png", tag: "HR", title: "پرسنل", desc: "هویت سازمانی و تطبیق" },
+      { src: "shots/05_flow.png", tag: "ARCH", title: "درخت جریان داده", desc: "از دستگاه تا ERP" },
+      { src: "shots/06_rahkaran.png", tag: "ERP", title: "همگام‌سازی راهکاران", desc: "شرکت‌ها و گیت‌ها" },
+      { src: "shots/07_biometrics.png", tag: "BIO", title: "بیومتریک دستگاه", desc: "چهره و اثرانگشت" },
+      { src: "shots/08_stations.png", tag: "SITE", title: "ایستگاه‌های تردد", desc: "سایت، پرسنل، دستگاه" },
+      { src: "shots/09_analytics.png", tag: "QA", title: "تحلیل کیفیت", desc: "شکاف و عملکرد" },
+      { src: "shots/10_erp.png", tag: "ERP", title: "هاب شرکت‌های ERP", desc: "پیکربندی چندشرکتی" },
+      { src: "shots/11_attendance_flow.png", tag: "FLOW", title: "معماری ثبت تردد", desc: "مسیر داده end-to-end" },
+      { src: "shots/12_ss_import.png", tag: "IMPORT", title: "ورود SQL Server", desc: "ایمپورت سازمانی" },
+    ];
+    const grid = document.getElementById("grid");
+    grid.innerHTML = shots.map(s => `
+      <article class="tile" data-full="${s.src}">
+        <img src="${s.src}" alt="${s.title}" loading="lazy" />
+        <div class="meta"><div class="tag">${s.tag}</div><h3>${s.title}</h3><p>${s.desc}</p></div>
+      </article>`).join("");
+
+    const lb = document.getElementById("lightbox");
+    const lbImg = lb.querySelector("img");
+    function openLb(src) { lbImg.src = src; lb.classList.add("open"); }
+    function closeLb() { lb.classList.remove("open"); lbImg.src = ""; }
+    document.body.addEventListener("click", (e) => {
+      const t = e.target.closest("[data-full]");
+      if (t) { openLb(t.getAttribute("data-full")); return; }
+      if (e.target === lb || e.target === lbImg) closeLb();
+    });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeLb(); });
+    document.querySelectorAll(".chip").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const el = document.getElementById(btn.dataset.go);
+        if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    });
+  </script>
+</body>
+</html>
