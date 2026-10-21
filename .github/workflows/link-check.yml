@@ -36,6 +36,9 @@ jobs:
             for ref in refs:
               if ref.startswith(("http://", "https://", "mailto:", "data:", "//")):
                 continue
+              # JS template expressions (src="${s.src}") are not file paths.
+              if "${" in ref:
+                continue
               target = (html.parent / ref).resolve()
               try:
                 target.relative_to(Path.cwd().resolve())
